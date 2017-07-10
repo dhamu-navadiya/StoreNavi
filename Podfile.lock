@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.3.0)
+  - EZLoadingActivity (1.01)
+  - Gloss (1.2.0)
+  - SwiftLocation (1.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - EZLoadingActivity
+  - Gloss
+  - SwiftLocation
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  EZLoadingActivity: edd7e387e5197b116ce2cccb3fd747ababc2a510
+  Gloss: ec49584b2e8144e39810b6db6285433316e0c1c7
+  SwiftLocation: 021a180b6dff74e683a9c20319c003ea8473b793
+
+PODFILE CHECKSUM: 250ecab8015f2e552725db70faadf8170a01edfb
+
+COCOAPODS: 1.0.0

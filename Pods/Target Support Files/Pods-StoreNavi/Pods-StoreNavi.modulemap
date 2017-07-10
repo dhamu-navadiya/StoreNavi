@@ -1,0 +1,6 @@
+framework module Pods_StoreNavi {
+  umbrella header "Pods-StoreNavi-umbrella.h"
+
+  export *
+  module * { export * }
+}
