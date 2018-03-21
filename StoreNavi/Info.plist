@@ -27,6 +27,8 @@
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Allow to Access the Location</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allow to Access the Location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow to Access the Location Only When Application in Use</string>
 	<key>Privacy - Location Usage Description</key>
