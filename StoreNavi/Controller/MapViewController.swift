@@ -16,15 +16,26 @@ class MapViewController: UIViewController,  UIScrollViewDelegate, CLLocationMana
     // MARK: - View LifeCycle
     
     
-    let MAP_TOPLEFT_LATITUDE = 23.072621  //23.072669
-    let MAP_TOPLEFT_LONGITUDE = 72.532793 //72.532327
-    var MAP_TOPLEFT_X:CGFloat = 27.5
-    var MAP_TOPLEFT_Y:CGFloat = 10
+//    let MAP_TOPLEFT_LATITUDE = 23.072621  //23.072669
+//    let MAP_TOPLEFT_LONGITUDE = 72.532793 //72.532327
+//    var MAP_TOPLEFT_X:CGFloat = 27.5
+//    var MAP_TOPLEFT_Y:CGFloat = 10
+//    //Map Bottom-Right
+//    let MAP_BOTTOMRIGHT_LATITUDE = 23.072323 //23.072519
+//    let MAP_BOTTOMRIGHT_LONGITUDE =  72.533184//72.532731
+//    var MAP_BOTTOMRIGHT_X:CGFloat = 151
+//    var MAP_BOTTOMRIGHT_Y:CGFloat = 36.5
+//    let MAP_MAX_ZOOM_SCALE:CGFloat = 2.5
+    
+    let MAP_TOPLEFT_LATITUDE = 33.7771158  //23.072669
+    let MAP_TOPLEFT_LONGITUDE = -84.6566933 //72.532327
+    var MAP_TOPLEFT_X:CGFloat = 0
+    var MAP_TOPLEFT_Y:CGFloat = 0
     //Map Bottom-Right
-    let MAP_BOTTOMRIGHT_LATITUDE = 23.072323 //23.072519
-    let MAP_BOTTOMRIGHT_LONGITUDE =  72.533184//72.532731
-    var MAP_BOTTOMRIGHT_X:CGFloat = 151
-    var MAP_BOTTOMRIGHT_Y:CGFloat = 36.5
+    let MAP_BOTTOMRIGHT_LATITUDE = 33.7770447 //23.072519
+    let MAP_BOTTOMRIGHT_LONGITUDE =  -84.6568730//72.532731
+    var MAP_BOTTOMRIGHT_X:CGFloat = 0
+    var MAP_BOTTOMRIGHT_Y:CGFloat = 0
     let MAP_MAX_ZOOM_SCALE:CGFloat = 2.5
     
     
@@ -76,7 +87,7 @@ class MapViewController: UIViewController,  UIScrollViewDelegate, CLLocationMana
         self.navigationItem.leftBarButtonItem = barButtonLeft
         
         //calculation
-        self.caculateTopAndBottom()
+        //self.caculateTopAndBottom()
         
         //intialization
         self.configureMap()
@@ -159,15 +170,19 @@ class MapViewController: UIViewController,  UIScrollViewDelegate, CLLocationMana
         self.imgUserLocationRadious?.isHidden = true
         
         //sample add pin
-        self.addPin(withLatitude: 23.072468, andLongitude: 72.533026, withPinColor: UIColor.red)
+//        self.addPin(withLatitude: 23.072468, andLongitude: 72.533026, withPinColor: UIColor.red)
+//        //sample pin
+//        self.addPin(withLatitude: 23.072608, andLongitude: 72.532947, withPinColor: UIColor.blue)
+//        self.addPin(withLatitude: 23.072332, andLongitude: 72.532982, withPinColor: UIColor.purple)
+//        //23.072591, 72.533035
+//        self.addPin(withLatitude: 23.072586, andLongitude: 72.533035, withPinColor: UIColor.brown)
+//        //23.072372, 72.533124
+//        self.addPin(withLatitude: 23.072372, andLongitude: 72.533124, withPinColor: UIColor.cyan)
         
-        //sample pin
-        self.addPin(withLatitude: 23.072608, andLongitude: 72.532947, withPinColor: UIColor.blue)
-        self.addPin(withLatitude: 23.072332, andLongitude: 72.532982, withPinColor: UIColor.purple)
-        //23.072591, 72.533035
-        self.addPin(withLatitude: 23.072586, andLongitude: 72.533035, withPinColor: UIColor.brown)
-        //23.072372, 72.533124
-        self.addPin(withLatitude: 23.072372, andLongitude: 72.533124, withPinColor: UIColor.cyan)
+         self.addPin(withLatitude: 33.7771548, andLongitude: -84.6568687, withPinColor: UIColor.red)
+         //sample pin
+         self.addPin(withLatitude: 33.7771673, andLongitude: -84.6567868, withPinColor: UIColor.blue)
+         self.addPin(withLatitude: 33.7772420, andLongitude: -84.6568197, withPinColor: UIColor.purple)
     }
     
     

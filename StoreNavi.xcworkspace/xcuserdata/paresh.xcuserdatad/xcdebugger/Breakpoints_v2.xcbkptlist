@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StoreNavi/Controller/MapViewController.swift"
-            timestampString = "510258177.783462"
+            timestampString = "543340850.6697561"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "245"
-            endingLineNumber = "245"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
             landmarkName = "MapViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StoreNavi/Controller/MapViewController.swift"
-            timestampString = "515007041.907421"
+            timestampString = "543340850.6720541"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "374"
-            endingLineNumber = "374"
+            startingLineNumber = "389"
+            endingLineNumber = "389"
             landmarkName = "updateUserLocation(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StoreNavi/Controller/MapViewController.swift"
-            timestampString = "515007030.265561"
+            timestampString = "543340850.672696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "402"
-            endingLineNumber = "402"
+            startingLineNumber = "417"
+            endingLineNumber = "417"
             landmarkName = "btnPinClickedAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
