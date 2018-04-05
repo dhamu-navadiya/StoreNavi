@@ -433,22 +433,43 @@
                                 <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4A-RA-WlG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are away from location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXu-Rk-oNF">
+                                        <rect key="frame" x="87.5" y="324" width="199.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="iXu-Rk-oNF" firstAttribute="centerX" secondItem="X4A-RA-WlG" secondAttribute="centerX" id="7Ea-9y-WKC"/>
+                                    <constraint firstItem="iXu-Rk-oNF" firstAttribute="centerY" secondItem="X4A-RA-WlG" secondAttribute="centerY" id="pkn-ZW-OWV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="X4A-RA-WlG" secondAttribute="trailing" id="BEX-HK-MeT"/>
+                            <constraint firstItem="X4A-RA-WlG" firstAttribute="top" secondItem="81E-2z-TXh" secondAttribute="top" id="EH1-ys-TvW"/>
                             <constraint firstItem="XzX-Or-5w9" firstAttribute="top" secondItem="yJ3-b0-Fjo" secondAttribute="bottom" id="H6P-u2-LxL"/>
                             <constraint firstItem="XzX-Or-5w9" firstAttribute="centerX" secondItem="81E-2z-TXh" secondAttribute="centerX" id="JXK-vp-eQf"/>
+                            <constraint firstItem="X4A-RA-WlG" firstAttribute="leading" secondItem="81E-2z-TXh" secondAttribute="leading" id="fNS-x2-3HH"/>
+                            <constraint firstAttribute="bottom" secondItem="X4A-RA-WlG" secondAttribute="bottom" id="sCY-Ic-EPv"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imgUserLocationPoint" destination="pfK-LV-rQ4" id="kCX-FN-1ps"/>
                         <outlet property="imgUserLocationRadious" destination="OpG-fw-Oec" id="6s0-8Z-6WR"/>
                         <outlet property="mapImageView" destination="XzX-Or-5w9" id="BFa-xb-iur"/>
+                        <outlet property="overlayView" destination="X4A-RA-WlG" id="Hgs-bO-TWC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8D-E8-0GF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="835"/>
+            <point key="canvasLocation" x="80.799999999999997" y="834.33283358320841"/>
         </scene>
         <!--OverlayVC-->
         <scene sceneID="dfU-8d-i3A">

@@ -38,6 +38,8 @@ class MapViewController: UIViewController,  UIScrollViewDelegate, CLLocationMana
     var MAP_BOTTOMRIGHT_Y:CGFloat = 0
     let MAP_MAX_ZOOM_SCALE:CGFloat = 2.5
     
+    let centreLat:Double = 33.7771548
+    let centreLong:Double = -84.6568687
     
     var coordinateConverter: CoordinateConverter!
     var displayScale: CGFloat = 0.0
@@ -52,11 +54,12 @@ class MapViewController: UIViewController,  UIScrollViewDelegate, CLLocationMana
     @IBOutlet weak var mapImageView: UIImageView!
     @IBOutlet weak var imgUserLocationPoint: UIImageView?
     @IBOutlet weak var imgUserLocationRadious: UIImageView?
+    @IBOutlet weak var overlayView: UIView!
     
     var currentLatitude:NSNumber = NSNumber(value: 0)
     var currentLongitude:NSNumber = NSNumber(value: 0)
 
-    
+    var showOverlayMessage:Bool = true
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +68,32 @@ class MapViewController: UIViewController,  UIScrollViewDelegate, CLLocationMana
         
         //need to updatestatus bar light content
         self.setNeedsStatusBarAppearanceUpdate()
+        
+        if showOverlayMessage {
+            do {
+                try Location.monitor(regionAt: CLLocationCoordinate2DMake(self.centreLat, self.centreLong), radius: 50, enter: { (entryRequest:RegionRequest) -> (Void) in
+                    print("entryRequest : \(String(describing: entryRequest.name))")
+                    
+                    self.overlayView.isHidden = true
+                    
+                }, exit: { (exitRequest:RegionRequest) -> (Void) in
+                    print("exitRequest : \(String(describing: exitRequest.name))")
+                    
+                    self.overlayView.isHidden = false
+                    
+                }) { (errorRequest:RegionRequest, error:Error) -> (Void) in
+                    print("region : \(String(describing: errorRequest.name)) : error : \(error.localizedDescription)")
+                    
+                    self.overlayView.isHidden = false
+                }
+            }
+            catch {
+                
+            }
+        }
+        else{
+            self.overlayView.isHidden = true
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
