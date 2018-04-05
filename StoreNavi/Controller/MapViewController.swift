@@ -27,13 +27,13 @@ class MapViewController: UIViewController,  UIScrollViewDelegate, CLLocationMana
 //    var MAP_BOTTOMRIGHT_Y:CGFloat = 36.5
 //    let MAP_MAX_ZOOM_SCALE:CGFloat = 2.5
     
-    let MAP_TOPLEFT_LATITUDE = 33.7771158  //23.072669
-    let MAP_TOPLEFT_LONGITUDE = -84.6566933 //72.532327
+    let MAP_TOPLEFT_LATITUDE = 33.7772122  //23.072669
+    let MAP_TOPLEFT_LONGITUDE = -84.6569515 //72.532327
     var MAP_TOPLEFT_X:CGFloat = 0
     var MAP_TOPLEFT_Y:CGFloat = 0
     //Map Bottom-Right
-    let MAP_BOTTOMRIGHT_LATITUDE = 33.7770447 //23.072519
-    let MAP_BOTTOMRIGHT_LONGITUDE =  -84.6568730//72.532731
+    let MAP_BOTTOMRIGHT_LATITUDE = 33.7771158 //23.072519
+    let MAP_BOTTOMRIGHT_LONGITUDE = -84.6566933//72.532731
     var MAP_BOTTOMRIGHT_X:CGFloat = 0
     var MAP_BOTTOMRIGHT_Y:CGFloat = 0
     let MAP_MAX_ZOOM_SCALE:CGFloat = 2.5
@@ -356,7 +356,7 @@ class MapViewController: UIViewController,  UIScrollViewDelegate, CLLocationMana
         let btnMapPin = UIButton(frame: CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(32), height: CGFloat(32)))
         btnMapPin.setImage(UIImage(named:"map-pin")!, for: .normal)
         //Display Business Owner with default Grey Color
-        //btnMapPin.backgroundColor = color
+        btnMapPin.backgroundColor = color
         let newLocation = CLLocation(coordinate: CLLocationCoordinate2DMake(laitude, longitude), altitude: 0, horizontalAccuracy: 0, verticalAccuracy: 0, timestamp: Date())
         self.addPin(with: newLocation, pin: btnMapPin)
         var pointOnImage = coordinateConverter.point(from: newLocation.coordinate)
